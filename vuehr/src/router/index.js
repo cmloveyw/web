@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Chat from '@/components/chat/Chat'
+import Home2 from '../components/personnel/components/Home'
+import HelloWord from '../components/personnel/components/HelloWord'
 // import EmpAdv from '@/components/emp/EmpAdv'
 // import EmpBasic from '@/components/emp/EmpBasic'
 // import PerEc from '@/components/personnel/PerEc'
@@ -55,6 +57,8 @@ export default new Router({
           }
         }
       ]
-    }
+    },
+    {path:"/per/ec",component:Home2},
+    {path:"/hello",component:HelloWord},
   ]
 })

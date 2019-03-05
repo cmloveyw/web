@@ -5,33 +5,28 @@
 </template>-->
 <!-- -->
 <template>
-  <div id="app">
-    <ul>
-      <li><roter-link href="/">Home</roter-link></li>
-      <li><roter-link href="/hello">Hello</roter-link></li>
-    </ul>
-    <router-view></router-view>
-    <!--<app-header v-on:titleChanged="updateTitle($event)" v-bind:title="title"></app-header>
+  <div id="home">
+    <app-header v-on:titleChanged="updateTitle($event)" v-bind:title="title"></app-header>
     <app-users v-bind:users="users"></app-users>
     <app-users v-bind:users="users"></app-users>
-    <app-footer v-bind:title="title"></app-footer>-->
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
 <script>
-  /*import Header from './components/Header'
-  import Footer from './components/Footer'
-  import Users from './components/Users'*/
+  import Header from './Header'
+  import Footer from './Footer'
+  import Users from './Users'
   export default {
-    name: 'app',
-    /*components:{
+    name: 'home',
+    components:{
       "app-header":Header,
       "app-footer":Footer,
       "app-users":Users
-    },*/
+    },
     data(){
       return{
-        /*users:[
+        users:[
           {name:"MiaoJie",position:"Web开发",show:false},
           {name:"MiaoJie",position:"Web开发",show:false},
           {name:"MiaoJie",position:"Web开发",show:false},
@@ -40,13 +35,13 @@
           {name:"MiaoJie",position:"Web开发",show:false},
           {name:"MiaoJie",position:"Web开发",show:false}
         ],
-        title:"传递的是一个值，(string number boolean)"*/
+        title:"传递的是一个值，(string number boolean)"
       }
     },
     methods:{
-      /*updateTitle(title){
+      updateTitle(title){
         this.title = title;
-      }*/
+      }
     }
   }
 </script>
